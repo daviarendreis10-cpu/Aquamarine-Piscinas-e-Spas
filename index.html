@@ -24,7 +24,7 @@
         </div>
     </nav>
 
-    <header class="hero">
+    <header class="hero" id="hero">
         <h1>Piscinas de Fibra em Passo de Torres e Litoral Sul de SC</h1>
         <p>Venda e instalação de piscinas de fibra em Passo de Torres,
             Sombrio, Araranguá e todo o litoral sul de Santa Catarina.</p>
@@ -64,7 +64,7 @@
             <div class="card-container">
                 <div class="card">
                     <div class="card-img">
-                    <img src="WhatsApp Image 2026-03-03 at 22.02.17.jpeg" alt="Piscina de Fibra Modelo Áurea 6x3m em Passo de Torres">
+                        <img src="WhatsApp Image 2026-03-03 at 22.02.17.jpeg" alt="Piscina de Fibra Modelo Áurea 6x3m em Passo de Torres">
                     </div>
                     <div class="card-content">
                         <h3>Modelo ÁUREA: Retangular Tradicional</h3>
@@ -75,7 +75,7 @@
 
                 <div class="card">
                     <div class="card-img">
-                    <img src="WhatsApp Image 2026-03-03 at 22.02.19.jpeg" alt="Piscina de Fibra Modelo Áurea SPA 7x3.5m em Passo de Torres">
+                        <img src="WhatsApp Image 2026-03-03 at 22.02.19.jpeg" alt="Piscina de Fibra Modelo Áurea SPA 7x3.5m em Passo de Torres">
                     </div>
                     <div class="card-content">
                         <h3>Modelo ÁUREA SPA: Retangular com Spa</h3>
@@ -86,7 +86,7 @@
 
                 <div class="card">
                     <div class="card-img">
-                    <img src="WhatsApp Image 2026-03-03 at 22.02.17 (1).jpeg" alt="Piscina de Fibra Modelo BAMBUSA 8x4m em Passo de Torres">
+                        <img src="WhatsApp Image 2026-03-03 at 22.02.17 (1).jpeg" alt="Piscina de Fibra Modelo BAMBUSA 8x4m em Passo de Torres">
                     </div>
                     <div class="card-content">
                         <h3>Modelo BAMBUSA: Oval</h3>
@@ -97,7 +97,7 @@
 
                 <div class="card">
                     <div class="card-img">
-                    <img src="WhatsApp Image 2026-03-03 at 22.02.21.jpeg" alt="Piscina de Fibra Modelo SPA DIAMANTE 9x4.5m em Passo de Torres">
+                        <img src="WhatsApp Image 2026-03-03 at 22.02.21.jpeg" alt="Piscina de Fibra Modelo SPA DIAMANTE 9x4.5m em Passo de Torres">
                     </div>
                     <div class="card-content">
                         <h3>Modelo SPA DIAMANTE: Retangular com Spa Diamante</h3>
@@ -162,6 +162,9 @@
         <img src="icone-wpp.png" width="50" alt="Ícone do WhatsApp">
         </a>
 
+
+    <a href="#hero" class="voltar" onclick="toggleMenu()">⇧</a>
+
     <script>
 window.addEventListener("scroll", function(){
 
@@ -169,10 +172,21 @@ window.addEventListener("scroll", function(){
 
     if(window.scrollY > 50){
         navbar.classList.add("scrolled");
+
     } else{
         navbar.classList.remove("scrolled");
     }
 
+});
+
+window.addEventListener("scroll", () => {
+    const voltar = document.querySelector(".voltar");
+    
+    if (window.scrollY > 200) {
+        voltar.classList.add("show");
+    } else {
+        voltar.classList.remove("show");
+    }
 });
 
 const toggle = document.querySelector(".menu-toggle");
